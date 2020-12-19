@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
@@ -11,13 +11,15 @@ import "../styles/navbar.css"
 export default function MailMoreNavbar() {
   const [scrollState, setScrollState] = useState(false)
 
-  document.addEventListener("scroll", e => {
-    let scrolled = document.documentElement.scrollTop
-    if (scrolled >= 1) {
-      setScrollState(true)
-    } else {
-      setScrollState(false)
-    }
+  useEffect(() => {
+    document.addEventListener("scroll", e => {
+      let scrolled = document.documentElement.scrollTop
+      if (scrolled >= 1) {
+        setScrollState(true)
+      } else {
+        setScrollState(false)
+      }
+    })
   })
 
   return (
