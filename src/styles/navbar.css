@@ -1,0 +1,63 @@
+.logo,
+.logo:hover {
+  font-weight: 700;
+  color: rgb(7, 20, 53);
+}
+
+.logo,
+.logo:hover,
+.features,
+.features:hover,
+.aboutUs,
+.aboutUs:hover,
+.contact,
+.contact:hover {
+  text-decoration: none;
+}
+
+.features,
+.features:hover,
+.aboutUs,
+.aboutUs:hover,
+.contact,
+.contact:hover {
+  color: rgb(7, 20, 53) !important;
+  font-weight: 400;
+  padding: 10px !important;
+}
+
+.features:after,
+.aboutUs:after,
+.contact:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #589a30;
+  transform: scaleX(0);
+  transition: 250ms ease-in-out;
+}
+
+.features:hover:after,
+.aboutUs:hover:after,
+.contact:hover:after {
+  transform: scaleX(1);
+}
+
+.notScrolled {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color .40s;
+}
+
+.scrolled {
+  background-color: #ffffff;
+  transition: background-color .50s;
+}
+
+.navCollapseColor {
+  background-color: #ffffff;
+}
+
+@media(max-width: 900px) {
+  .notScrolled {
+    background-color: rgb(248, 248, 248);
+  }
+}

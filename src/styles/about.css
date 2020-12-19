@@ -1,0 +1,18 @@
+.aboutPic {
+  height: 50%;
+  width: 50%;
+  padding-top: 75px;
+}
+
+.aboutHeading {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgb(7, 20, 53);
+}
+
+.pAbout {
+  max-width: 500px;
+  margin: auto;
+}

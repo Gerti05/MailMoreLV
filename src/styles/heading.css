@@ -1,0 +1,59 @@
+.bgColor {
+  background-color: rgb(248, 248, 248);
+  padding: 130px 0px 80px;
+  position: relative;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px calc(100% - 5vw));
+}
+
+.h5Heading {
+  font-size: 16px;
+  color: rgb(204, 168, 110);
+  letter-spacing: 0px;
+  margin-bottom: 16px;
+  display: block;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.h1Heading {
+  font-size: 48px;
+  line-height: 48px;
+  color: rgb(7, 20, 53);
+}
+
+.h2Heading {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgb(7, 20, 53);
+}
+
+.form-control {
+  border: 1px solid #589a30 !important;
+}
+
+.headingSubtitle {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: rgb(7, 20, 53);
+}
+
+.subtitleLink,
+.subtitleLink:hover {
+  color: #589a30;
+  text-decoration: none;
+}
+
+.phoneMailPic {
+  height: 85%;
+  width: 85%;
+  margin-left: 100px;
+}

@@ -1,0 +1,13 @@
+.contactPic {
+  height: 35%;
+  width: 35%;
+  padding-top: 75px;
+}
+
+.contactHeading {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgb(7, 20, 53);
+}
