@@ -9,19 +9,32 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "../styles/navbar.css"
 
 export default function MailMoreNavbar() {
-  const [scrollState, setScrollState] = useState(false)
+  // useState gets initial value from localStorage. 
+  // The first time the site loads, useState defaults to false, because localStorage initializes to 0.
+  const [scrollState, setScrollState] = useState(() => {
+    const localData = localStorage.getItem("scrollState")
+    JSON.parse(localData)
 
+    return localData >= 1 ? true : false
+  })
+
+  // useEffect runs every render, and localStorage updates anytime user scrolls.
+  // localStorage saves scrolled value incase user refreshes page.
+  // While user scrolls page, setScrollState updates useState value.
   useEffect(() => {
     document.addEventListener("scroll", e => {
       let scrolled = document.documentElement.scrollTop
+      localStorage.setItem("scrollState", JSON.stringify(scrolled))
+
       if (scrolled >= 1) {
         setScrollState(true)
       } else {
         setScrollState(false)
       }
     })
-  })
+  }, [scrollState])
 
+  // Navbar that updates background color when user scrolls down the page.
   return (
     <Navbar
       fixed="top"
