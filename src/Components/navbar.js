@@ -9,13 +9,17 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "../styles/navbar.css"
 
 export default function MailMoreNavbar() {
-  // useState gets initial value from localStorage. 
+  // useState gets initial value from localStorage.
   // The first time the site loads, useState defaults to false, because localStorage initializes to 0.
   const [scrollState, setScrollState] = useState(() => {
-    const localData = window.localStorage.getItem("scrollState")
-    JSON.parse(localData)
+    if (window) {
+      const localData = localStorage.getItem("scrollState")
+      JSON.parse(localData)
 
-    return localData >= 1 ? true : false
+      return localData >= 1 ? true : false
+    } else {
+      return false
+    }
   })
 
   // useEffect runs every render, and localStorage updates anytime user scrolls.
