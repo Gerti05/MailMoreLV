@@ -13,7 +13,7 @@ export default function MailMoreNavbar() {
   // The first time the site loads, useState defaults to false, because localStorage initializes to 0.
   
   const [scrollState, setScrollState] = useState(() => {
-      const localData = window.localStorage.getItem("scrollState")
+      const localData = typeof window !== 'undefined' && window.localStorage.getItem("scrollState")
       JSON.parse(localData)
 
       return localData >= 1 ? true : false
