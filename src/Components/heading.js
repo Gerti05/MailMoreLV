@@ -11,14 +11,18 @@ import { Link } from "gatsby"
 import "../styles/heading.css"
 
 export default function Heading() {
+
+  // Saves email that user enters into useState.
   const [emailState, setEmailState] = useState("")
 
+  // Submits email to Mailchimp using Mailchimp plugin.
   function handleSubmit(e) {
     e.preventDefault()
     addToMailchimp(emailState)
     e.target.reset()
   }
 
+  // Takes change event, and sets it to useState.
   function handleChange(event) {
     setEmailState(event.target.value)
   }

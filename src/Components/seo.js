@@ -13,12 +13,14 @@ const SEO = ({ title, description }) => {
     siteUrl,
   } = site.siteMetadata
 
+  // Seo object uses default Title or description, unless new title or description is passed down from a component.
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname}`,
   }
 
+  // Returns metatags in header.
   return (
     <Helmet title={`${seo.title} | ${defaultTitle}`}>
       <meta name="description" content={seo.description} />
@@ -33,18 +35,19 @@ const SEO = ({ title, description }) => {
 
 export default SEO
 
+// Seo expects props to be strings.
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  article: PropTypes.bool,
 }
 
+// Sets default props as null. They get changed if props are passed down from component.
 SEO.defaultProps = {
   title: null,
   description: null,
-  article: false,
 }
 
+// Takes title, description, and url from config file, and sets them to default title, description and url.
 const query = graphql`
   query SEO {
     site {

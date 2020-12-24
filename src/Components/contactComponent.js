@@ -11,6 +11,8 @@ import ContactPic from "../img/undraw_contract_uy56.svg"
 import "../styles/contact.css"
 
 export default function contactComponent() {
+
+  // Uses the emailjs library to send customer questions from contact form to my email address without needing to set up a backend.
   function sendEmail(e) {
     e.preventDefault()
     emailjs
