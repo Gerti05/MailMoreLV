@@ -5,9 +5,9 @@ module.exports = {
   siteMetadata: {
     title: "MailMoreLV",
     description:
-      "MailMoreLV is a virtual mailbox provider, that is based out of Las Vegas. We help businesses and individuals by managing their mail, and providing them with virtual mailbox services.",
+      "MailMoreLV is a virtual mailbox provider based out of Las Vegas. We help businesses and individuals by managing their mail.",
     url: "https://MailMoreLV.com",
-    image: "/src/img/mailmorelv.jpg"
+    image: "./src/img/mailmorelv.jpg"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
