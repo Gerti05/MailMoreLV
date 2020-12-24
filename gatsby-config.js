@@ -7,7 +7,7 @@ module.exports = {
     description:
       "MailMoreLV is a virtual mailbox provider based out of Las Vegas. We help businesses and individuals by managing their mail.",
     url: "https://MailMoreLV.com",
-    image: "./src/img/mailmorelv.jpg"
+    image: "/mailmorelv.jpg"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
