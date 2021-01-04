@@ -19,6 +19,7 @@
     "emailjs-com": "^2.6.4",
     "gatsby": "^2.24.91",
     "gatsby-plugin-anchor-links": "^1.2.0",
+    "gatsby-plugin-google-gtag": "^2.5.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-react-helmet": "^3.7.0",
     "react": "^16.12.0",
